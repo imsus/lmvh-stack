@@ -4,12 +4,12 @@ import messages from '../i18n/locales.json'
 export type MessageSchema = typeof messages['en']
 
 declare module 'vue-i18n' {
-	export interface DefineLocaleMessage extends MessageSchema {}
+    export interface DefineLocaleMessage extends MessageSchema { }
 }
 
 const i18n = createI18n<[MessageSchema], 'en'>({
-	locale: 'en',
-	messages,
+    locale: 'en',
+    messages,
 })
 
 export default i18n

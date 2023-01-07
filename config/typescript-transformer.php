@@ -7,7 +7,7 @@ return [
      */
 
     'auto_discover_types' => [
-        app_path()
+        app_path(),
     ],
 
     /*
@@ -17,8 +17,8 @@ return [
      */
 
     'collectors' => [
-    Hybridly\Support\TypeScriptTransformer\DataResourceTypeScriptCollector::class,
-    Spatie\LaravelData\Support\TypeScriptTransformer\DataTypeScriptCollector::class,
+        Hybridly\Support\TypeScriptTransformer\DataResourceTypeScriptCollector::class,
+        Spatie\LaravelData\Support\TypeScriptTransformer\DataTypeScriptCollector::class,
     ],
 
     /*
@@ -27,8 +27,8 @@ return [
      */
 
     'transformers' => [
-    Spatie\LaravelData\Support\TypeScriptTransformer\DataTypeScriptTransformer::class,
-    Spatie\TypeScriptTransformer\Transformers\EnumTransformer::class,
+        Spatie\LaravelData\Support\TypeScriptTransformer\DataTypeScriptTransformer::class,
+        Spatie\TypeScriptTransformer\Transformers\EnumTransformer::class,
     ],
 
     /*
