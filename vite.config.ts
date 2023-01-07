@@ -12,6 +12,7 @@ import icons from 'unplugin-icons/vite'
 import vue from '@vitejs/plugin-vue'
 import run from 'vite-plugin-run'
 import i18n from '@intlify/unplugin-vue-i18n/vite'
+import { MasterCSSVitePlugin } from '@master/css.vite'
 
 export default defineConfig({
 	plugins: [
@@ -31,6 +32,12 @@ export default defineConfig({
 		]),
 		hybridly(),
 		vue(),
+        MasterCSSVitePlugin({
+            include: [
+                'resources/**/*.vue',
+                'resources/**/*.blade.php',
+            ]
+        }),
 		i18n({
 			include: path.resolve(__dirname, './resources/i18n/locales.json'),
 		}),
